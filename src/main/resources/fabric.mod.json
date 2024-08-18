@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "shangxin-city-mod",
+	"version": "1.0.0-dev1",
+	"name": "Shangxin City Mod",
+	"description": "Something about Shangxin.",
+	"authors": [
+		"Turtle Coffee"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/shangxin-city-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"top.dragonstudio.ShangxinCityMod"
+		],
+		"client": [
+			"top.dragonstudio.ShangxinCityModClient"
+		],
+		"fabric-datagen": [
+			"top.dragonstudio.ShangxinCityModDataGenerator"
+		]
+	},
+	"mixins": [
+		"shangxin-city-mod.mixins.json",
+		{
+			"config": "shangxin-city-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
